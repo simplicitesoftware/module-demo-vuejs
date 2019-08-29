@@ -1,4 +1,4 @@
-package com.simplicite.extobjects.VueJSDemo;
+package com.simplicite.extobjects.DemoVueJS;
 
 import com.simplicite.util.AppLog;
 import com.simplicite.util.ExternalObject;
