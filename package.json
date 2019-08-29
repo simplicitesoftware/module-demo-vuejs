@@ -1,0 +1,10 @@
+{
+    "date": "Thu Aug 29 23:40:04 CEST 2019",
+    "name": "DemoVueJS",
+    "format": "xml",
+    "description": "Vue.js framework demo",
+    "files": ["DemoVueJS.xml"],
+    "repository": {},
+    "version": "0.1",
+    "dependencies": [{"Simplicite": "4.0"}]
+}
