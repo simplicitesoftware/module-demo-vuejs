@@ -10,15 +10,17 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4" v-for="product in products">
-				<h1 class="text-primary text-center title">{{ product.demoPrdName }}</h1>
-				<h3 class="text-muted text-center">
-					<img v-if="product.demoPrdPicture" :src="'data:' + product.demoPrdPicture.mime + ';base64,' + product.demoPrdPicture.content"/>
-					<br/>{{ product.demoPrdReference }}
-				</h3>
-				<p class="text-left text-muted">{{ product.demoPrdDescription }}</p>
-				<p class="text-right"><a href="javascript:" class="btn btn-danger btn-md">{{ parseFloat(product.demoPrdUnitPrice).toFixed(2) }}</a></p>
-			</div>
+			<template v-for="product in products">
+				<div class="col-md-4">
+					<h1 class="text-primary text-center title">{{ product.demoPrdName }}</h1>
+					<h3 class="text-muted text-center">
+						<img v-if="product.demoPrdPicture" v-bind:src="'data:' + product.demoPrdPicture.mime + ';base64,' + product.demoPrdPicture.content"/>
+						<br/>{{ product.demoPrdReference }}
+					</h3>
+					<p class="text-left text-muted">{{ product.demoPrdDescription }}</p>
+					<p class="text-right"><a href="javascript:" class="btn btn-danger btn-md">{{ parseFloat(product.demoPrdUnitPrice).toFixed(2) }}</a></p>
+				</div>
+			</template>
 		</div>
 	</div>
 	<div class="row">

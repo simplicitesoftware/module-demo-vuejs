@@ -26,14 +26,14 @@ public class demovjs extends ExternalObject {
 				BootstrapWebPage wp = new BootstrapWebPage(params.getRoot(), getDisplay(), false);
 				wp.setFavicon(HTMLTool.getResourceIconURL(this, "FAVICON"));
 				wp.appendAjax(true);
-				wp.appendJSInclude(HTMLTool.getResourceJSURL(getGrant(), "VUEJS"));
+				wp.appendVue();
 				wp.appendJSInclude(HTMLTool.getResourceJSURL(this, "SCRIPT"));
 				wp.appendCSSInclude(HTMLTool.getResourceCSSURL(this, "STYLES"));
 				wp.append(HTMLTool.getResourceHTMLContent(this, "HTML"));
 				wp.setReady(render);
 				return wp.toString();
 			} else { // Private page version
-				appendJSInclude(HTMLTool.getResourceJSURL(getGrant(), "VUEJS"));
+				appendVue();
 				return javascript(render);
 			}
 		} catch (Exception e) {
