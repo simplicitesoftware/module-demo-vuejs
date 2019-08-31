@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row" v-if="products">
 			<template v-for="product in products">
 				<div class="col-md-4">
 					<h1 class="text-primary text-center title">{{ product.demoPrdName }}</h1>
@@ -22,6 +22,7 @@
 				</div>
 			</template>
 		</div>
+		<div class="row text-center" v-else><h3>Loading...</h3></div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">

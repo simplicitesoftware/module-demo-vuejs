@@ -1,5 +1,5 @@
 var demovjs = typeof VJSDemo !== 'undefined' ? VJSDemo : (function($) {
-	var app, prd, vue, data = { products: [] };
+	var app, prd, vue, data = { products: null };
 	
 	/**
 	 * Render
