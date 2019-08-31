@@ -1,8 +1,8 @@
 {
-    "date": "Fri Aug 30 00:59:00 CEST 2019",
+    "date": "Sun Sep 01 01:56:25 CEST 2019",
     "name": "DemoVueJS",
     "format": "xml",
-    "description": "Vue.js framework demo",
+    "description": "Simplicit&eacute; + **Vue.js** framework demo.\n\nNote that this modules is based on the `Demo` module",
     "files": ["DemoVueJS.xml"],
     "repository": {},
     "version": "0.1",

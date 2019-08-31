@@ -8,8 +8,10 @@
 		<mdl_version>0.1</mdl_version>
 		<mdl_prefix/>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/demo-vuejs-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2019-08-30 00:59:00</mdl_lastupd>
-		<mdl_comment><![CDATA[Vue.js framework demo]]></mdl_comment>
+		<mdl_lastupd>2019-09-01 01:56:25</mdl_lastupd>
+		<mdl_comment><![CDATA[Simplicit&eacute; + **Vue.js** framework demo.
+
+Note that this modules is based on the `Demo` module]]></mdl_comment>
 	</data>
 </object>
 <object>

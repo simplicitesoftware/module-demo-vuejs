@@ -11,7 +11,9 @@
 `DemoVueJS` module definition
 =============================
 
-Vue.js framework demo
+Simplicit&eacute; + **Vue.js** framework demo.
+
+Note that this modules is based on the `Demo` module
 
 `demovjs` external object definition
 ------------------------------------
