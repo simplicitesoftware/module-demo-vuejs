@@ -11,13 +11,22 @@
 `DemoVueJS` module definition
 =============================
 
-Simplicit&eacute; + **Vue.js** framework demo.
+`DemoVueJS`module: **Vue.js** framework frontend demo.
 
-Note that this modules is based on the `Demo` module
+Note that this modules is based on the `Demo` module.
+
+Settings from [GitHub](https://github.com/simplicitesoftware/module-demo-vuejs):
+
+```json
+{
+	"type": "git",
+	"origin": { "uri": "https://github.com/simplicitesoftware/module-demo-vuejs.git" }
+}
+```
 
 `demovjs` external object definition
 ------------------------------------
 
-Vue.js&reg; external object example
+Simple demo frontend using **Vue.js** framework
 
 

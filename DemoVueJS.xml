@@ -8,10 +8,19 @@
 		<mdl_version>0.1</mdl_version>
 		<mdl_prefix/>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/demo-vuejs-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2019-09-01 01:56:25</mdl_lastupd>
-		<mdl_comment><![CDATA[Simplicit&eacute; + **Vue.js** framework demo.
+		<mdl_lastupd>2019-09-01 02:03:12</mdl_lastupd>
+		<mdl_comment><![CDATA[`DemoVueJS`module: **Vue.js** framework frontend demo.
 
-Note that this modules is based on the `Demo` module]]></mdl_comment>
+Note that this modules is based on the `Demo` module.
+
+Settings from [GitHub](https://github.com/simplicitesoftware/module-demo-vuejs):
+
+```json
+{
+	"type": "git",
+	"origin": { "uri": "https://github.com/simplicitesoftware/module-demo-vuejs.git" }
+}
+```]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -51,7 +60,7 @@ Note that this modules is based on the `Demo` module]]></mdl_comment>
 		<obe_name>demovjs</obe_name>
 		<obe_type>E</obe_type>
 		<obe_url/>
-		<obe_comment><![CDATA[Vue.js&reg; external object example]]></obe_comment>
+		<obe_comment><![CDATA[Simple demo frontend using **Vue.js** framework]]></obe_comment>
 		<obe_help/>
 		<obe_class/>
 		<obe_script_id>src/com/simplicite/extobjects/DemoVueJS/demovjs.java</obe_script_id>

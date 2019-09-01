@@ -1,8 +1,8 @@
 {
-    "date": "Sun Sep 01 01:56:25 CEST 2019",
+    "date": "Sun Sep 01 02:03:12 CEST 2019",
     "name": "DemoVueJS",
     "format": "xml",
-    "description": "Simplicit&eacute; + **Vue.js** framework demo.\n\nNote that this modules is based on the `Demo` module",
+    "description": "`DemoVueJS`module: **Vue.js** framework frontend demo.\n\nNote that this modules is based on the `Demo` module.\n\nSettings from [GitHub](https://github.com/simplicitesoftware/module-demo-vuejs):\n\n```json\n{\n\t\"type\": \"git\",\n\t\"origin\": { \"uri\": \"https://github.com/simplicitesoftware/module-demo-vuejs.git\" }\n}\n```",
     "files": ["DemoVueJS.xml"],
     "repository": {},
     "version": "0.1",
