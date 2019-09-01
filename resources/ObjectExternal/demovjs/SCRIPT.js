@@ -1,4 +1,4 @@
-var demovjs = typeof VJSDemo !== 'undefined' ? VJSDemo : (function($) {
+var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 	var app, prd, vue, data = { products: null };
 	
 	/**
