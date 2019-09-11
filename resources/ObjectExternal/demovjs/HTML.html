@@ -11,8 +11,10 @@
 	<div class="container">
 		<div class="row product" v-if="item" v-on:click="select(null)">
 			<template>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
+					<h1 class="text-primary">{{ item.demoPrdName }}</h1>
 					<img v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content"/>
+					<br/><span class="text-muted">{{ item.demoPrdReference }}</span>
 				</div>
 				<div class="col-md-8 text-documentation" v-html="item.demoPrdDocumentation"></div>
 			</template>
@@ -20,7 +22,7 @@
 		<div class="row" v-if="list">
 			<template v-for="item in list">
 				<div class="col-md-4" v-on:click="select(item)">
-					<h1 class="text-primary text-center title">{{ item.demoPrdName }}</h1>
+					<h1 class="text-primary text-center">{{ item.demoPrdName }}</h1>
 					<h3 class="text-muted text-center">
 						<img v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content"/>
 						<br/>{{ item.demoPrdReference }}
