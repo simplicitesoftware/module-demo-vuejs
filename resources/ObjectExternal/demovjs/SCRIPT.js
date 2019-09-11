@@ -1,5 +1,5 @@
 var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
-	var app, prd, vue, data = { products: null };
+	var app, prd, vue, data = { list: null, item: null };
 	
 	/**
 	 * Render
@@ -12,11 +12,19 @@ var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 		data.bannerURL = banner; // Image banner URL
 		data.toFixed = function() { return function(n, r) { return parseFloat(r(n)).toFixed(2); } }; // Rendering for decimal
 		if (!pub) $("#demovjs").css("min-height", "1000px");
-		vue = new Vue({ el: '#demovjs', data: data });
+		vue = new Vue({
+			el: '#demovjs',
+			data: data,
+			methods: {
+				select: function(item) {
+					data.item = item;
+				}
+			}
+		});
 		app = pub ? new Simplicite.Ajax(root, 'api', 'website', 'simplicite') : new Simplicite.Ajax();
 		prd = app.getBusinessObject('DemoProduct');
 		prd.search(function(rows) {
-			data.products = rows;
+			data.list = rows;
 		}, null, { inlineDocs: true });
 	}
 
