@@ -30,7 +30,7 @@ Settings from [GitHub](https://github.com/simplicitesoftware/module-demo-vuejs):
 		<shc_name>demovjs</shc_name>
 		<shc_url><![CDATA[[EXPR:HTMLPage.getPublicExternalObjectURL("demovjs")]]]></shc_url>
 		<shc_target>_blank</shc_target>
-		<shc_order>136</shc_order>
+		<shc_order>131</shc_order>
 		<shc_visible>1</shc_visible>
 		<shc_icon>fas/globe</shc_icon>
 		<shc_keys/>
