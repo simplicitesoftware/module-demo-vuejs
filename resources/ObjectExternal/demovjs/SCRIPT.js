@@ -1,6 +1,6 @@
 var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
-	var app, prd, vue, data = { list: null, item: null };
-	
+	var app, prd, data = { list: null, item: null };
+
 	/**
 	 * Render
 	 * @param root Context path
@@ -9,23 +9,42 @@ var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 	 * @function
 	 */
 	function render(root, banner, pub) {
-		data.bannerURL = banner; // Image banner URL
-		data.toFixed = function() { return function(n, r) { return parseFloat(r(n)).toFixed(2); } }; // Rendering for decimal
-		if (!pub) $("#demovjs").css("min-height", "1000px");
-		vue = new Vue({
-			el: '#demovjs',
-			data: data,
-			methods: {
-				select: function(item) {
-					data.item = item;
-				}
-			}
-		});
-		app = pub ? new Simplicite.Ajax(root, 'api', 'website', 'simplicite') : new Simplicite.Ajax();
+		data.bannerURL = data.bannerURL || banner; // Image banner URL
+
+		app = app || (pub
+				? new Simplicite.Ajax(root, 'api', 'website', 'simplicite')  // External
+				: Simplicite.Application  // Internal
+			);
+
 		prd = app.getBusinessObject('DemoProduct');
-		prd.search(function(rows) {
-			data.list = rows;
-		}, null, { inlineDocs: true });
+
+		try {
+			if (!pub) $('#demovjs').css('min-height', '1000px');
+
+			if (typeof Vue === 'undefined') throw 'Vue.js not available';
+			new Vue({
+				el: '#demovjs',
+				data: data,
+				beforeMount: function() {
+					data.list = null;
+					data.item = null;
+				},
+				methods: {
+					select: function(item) {
+						data.item = item;
+					}
+				},
+			});
+
+			prd.search(function(rows) {
+				data.list = rows;
+			}, null, {
+				inlineDocs: true
+			});
+		}
+		catch(e) {
+			console.error('Render error: ' + e.message);
+		}
 	}
 
 	return { render: render };	
