@@ -3,21 +3,19 @@ var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 
 	/**
 	 * Render
-	 * @param root Context path
-	 * @param banner Banner URL
-	 * @param pub Public?
+	 * @param params Parameters
 	 * @function
 	 */
-	function render(root, banner, pub) {
+	function render(params) {
 		try {
 			if (typeof Vue === 'undefined') throw 'Vue.js not available';
 
-			if (!pub) $('#demovjs').css('min-height', '1000px');
+			if (!params.pub) $('#demovjs').css('min-height', '1000px');
 
-			data.bannerURL = data.bannerURL || banner; // Image banner URL
+			data.bannerURL = data.bannerURL || params.bannerURL; // Image banner URL
 
-			app = app || (pub
-					? new Simplicite.Ajax(root, 'api', 'website', 'simplicite')  // External
+			app = app || (params.pub
+					? new Simplicite.Ajax(params.root, 'api', 'website', 'simplicite')  // External
 					: Simplicite.Application  // Internal
 				);
 
