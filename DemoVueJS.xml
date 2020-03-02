@@ -52,7 +52,7 @@ To import this module:
 		<shc_target>_blank</shc_target>
 		<shc_order>132</shc_order>
 		<shc_visible>1</shc_visible>
-		<shc_icon>fas/globe</shc_icon>
+		<shc_icon>vue</shc_icon>
 		<shc_keys/>
 		<row_module_id.mdl_name>DemoVueJS</row_module_id.mdl_name>
 	</data>
@@ -152,7 +152,7 @@ To import this module:
 		<map_domain_id.obd_name>DemoDomain</map_domain_id.obd_name>
 		<map_object_id.obj_name>demovjs</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>71110</map_order>
+		<map_order>70940</map_order>
 		<map_ext>1</map_ext>
 		<row_module_id.mdl_name>DemoVueJS</row_module_id.mdl_name>
 	</data>
@@ -175,7 +175,7 @@ To import this module:
 		<res_cached>0</res_cached>
 		<res_file/>
 		<res_file_compiled/>
-		<res_image>resources/Disposition/default/vue.svg</res_image>
+		<res_image>resources/Disposition/default/vue.png</res_image>
 		<row_module_id.mdl_name>DemoVueJS</row_module_id.mdl_name>
 	</data>
 	<data>
