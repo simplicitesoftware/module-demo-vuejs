@@ -7,9 +7,9 @@ import com.simplicite.util.tools.Parameters;
 import com.simplicite.webapp.web.BootstrapWebPage;
 
 /**
- * Vue.js demo
+ * Vue.js custom frontend UI
  */
-public class demovjs extends ExternalObject {
+public class DemoVueJSFrontend extends ExternalObject {
 	private static final long serialVersionUID = 1L;
 
 	/**

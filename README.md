@@ -41,8 +41,8 @@ To import this module:
 - Click on the _Import module_ button
 
 
-`demovjs` external object definition
-------------------------------------
+`DemoVueJSFrontend` external object definition
+----------------------------------------------
 
 Simple demo frontend using **Vue.js** framework
 

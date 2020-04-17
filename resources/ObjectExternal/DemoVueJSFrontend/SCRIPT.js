@@ -1,4 +1,4 @@
-var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
+var DemoVueJSFrontend = typeof DemoVueJSFrontend !== 'undefined' ? DemoVueJSFrontend : (function($) {
 	var app, prd, data = { list: null, item: null };
 
 	/**
@@ -10,7 +10,7 @@ var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 		try {
 			if (typeof Vue === 'undefined') throw 'Vue.js not available';
 
-			if (!params.pub) $('#demovjs').css('min-height', '1000px');
+			if (!params.pub) $('#demovuejsfrontend').css('min-height', '1000px');
 
 			data.bannerURL = data.bannerURL || params.bannerURL; // Image banner URL
 
@@ -22,7 +22,7 @@ var demovjs = typeof demovjs !== 'undefined' ? demovjs : (function($) {
 			prd = prd || app.getBusinessObject('DemoProduct');
 
 			new Vue({
-				el: '#demovjs',
+				el: '#demovuejsfrontend',
 				data: data,
 				beforeMount: function() {
 					data.list = null;
