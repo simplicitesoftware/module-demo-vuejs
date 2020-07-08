@@ -1,4 +1,4 @@
-var DemoVueJSFrontend = typeof DemoVueJSFrontend !== 'undefined' ? DemoVueJSFrontend : (function($) {
+var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
 	var app, prd, data = { list: null, item: null };
 
 	/**
