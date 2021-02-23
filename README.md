@@ -40,7 +40,6 @@ To import this module:
 
 - Click on the _Import module_ button
 
-
 `DemoVueJSFrontend` external object definition
 ----------------------------------------------
 
