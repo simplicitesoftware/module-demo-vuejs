@@ -1,4 +1,4 @@
-var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
+var DemoVueJSFrontend = (function($) {
 	var app, prd, data = { list: null, item: null };
 
 	/**
