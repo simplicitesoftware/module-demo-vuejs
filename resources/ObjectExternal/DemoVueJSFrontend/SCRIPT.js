@@ -1,5 +1,6 @@
-var DemoVueJSFrontend = (function($) {
-	var app, prd, data = { list: null, item: null };
+const DemoVueJSFrontend = (function($) {
+	let app, prd;
+	const data = { list: null, item: null };
 
 	/**
 	 * Render
