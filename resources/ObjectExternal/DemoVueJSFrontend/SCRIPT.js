@@ -1,4 +1,4 @@
-const DemoVueJSFrontend = (function($) {
+var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
 	let app, prd;
 	const data = { list: null, item: null };
 
