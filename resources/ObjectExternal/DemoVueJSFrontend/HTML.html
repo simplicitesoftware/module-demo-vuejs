@@ -27,8 +27,8 @@
 						<img alt="Product picture" v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content"/>
 						<br/>{{ item.demoPrdReference }}
 					</h3>
-					<p class="text-left text-muted">{{ item.demoPrdDescription }}</p>
-					<p class="text-right"><span class="btn btn-danger btn-md">{{ parseFloat(item.demoPrdUnitPrice).toFixed(2) }}</span></p>
+					<p class="text-start text-muted">{{ item.demoPrdDescription }}</p>
+					<p class="text-end"><span class="btn btn-danger btn-md">{{ parseFloat(item.demoPrdUnitPrice).toFixed(2) }}</span></p>
 				</div>
 			</template>
 		</div>
