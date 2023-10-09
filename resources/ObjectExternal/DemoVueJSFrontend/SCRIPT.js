@@ -1,4 +1,4 @@
-var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
+var DemoVueJSFrontend = DemoVueJSFrontend || (() => {
 	let app, prd;
 	const data = { item: null, list: null };
 
@@ -10,18 +10,16 @@ var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
 		new Vue({
 			el: '#demovuejsfrontend',
 			data: data,
-			beforeMount: function() {
+			beforeMount: () => {
 				data.list = null;
 				data.item = null;
 			},
 			methods: {
-				select: function(item) {
-					data.item = item;
-				}
+				select: item => data.item = item
 			},
 		});
 
-		prd.search(function(rows) {
+		prd.search(rows => {
 			data.list = rows;
 		}, null, { inlineDocs: true });
 	}
@@ -51,15 +49,17 @@ var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
 	
 			data.bannerURL = data.bannerURL || params.bannerURL; // Image banner URL
 	
-			app = app || (params.pub
-					? new Simplicite.Ajax(params.root, 'api', 'website', 'simplicite')  // External
-					: Simplicite.Application  // Internal
-				);
+			app = app || (params.pub ?
+				// External
+				new Simplicite.Ajax(params.root, 'api', 'website', 'simplicite') :
+				// Internal
+				$ui.getAjax()
+			);
 	
 			prd = prd || app.getBusinessObject('DemoProduct');
 	
 			if (Vue.version.startsWith('2.'))
-				render2()
+				render2();
 			else
 				render3();
 		} catch(e) {
@@ -69,4 +69,4 @@ var DemoVueJSFrontend = DemoVueJSFrontend || (function($) {
 	}
 	
 	return { render: render };
-})(jQuery);
+})();
