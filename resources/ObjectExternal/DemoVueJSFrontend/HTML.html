@@ -14,7 +14,7 @@
 			<template>
 				<div class="col-md-4 text-center">
 					<h1 class="text-primary">{{ item.demoPrdName }}</h1>
-					<img alt="Product picture" v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content"/>
+					<img v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content" v-bind:alt="item.demoPrdName"/>
 					<br/><span class="text-muted">{{ item.demoPrdReference }}</span>
 				</div>
 				<div class="col-md-8 text-documentation" v-html="item.demoPrdDocumentation"></div>
@@ -25,7 +25,7 @@
 				<div class="col-md-4 clickable" v-on:click="select(item)">
 					<h1 class="text-primary text-center">{{ item.demoPrdName }}</h1>
 					<h3 class="text-muted text-center">
-						<img alt="Product picture" v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content"/>
+						<img v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content" v-bind:alt="item.demoPrdName"/>
 						<br/>{{ item.demoPrdReference }}
 					</h3>
 					<p class="text-start text-muted">{{ item.demoPrdDescription }}</p>
