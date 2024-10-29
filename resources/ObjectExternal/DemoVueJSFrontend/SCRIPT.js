@@ -12,8 +12,6 @@ class DemoVueJSFrontend {
 			console.log('Vue.js ' + Vue.version);
 	
 			const data = {
-				item: null,
-				list: null,
 				bannerURL: params.bannerURL // Image banner URL
 			};
 	
@@ -32,6 +30,7 @@ class DemoVueJSFrontend {
 	
 			prd.search(rows => {
 				data.list = rows;
+				data.item = null;
 				vue.mount('#demovuejsfrontend');
 			}, null, { inlineDocs: true });
 		} catch(e) {
