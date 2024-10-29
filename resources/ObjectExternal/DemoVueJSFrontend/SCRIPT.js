@@ -1,4 +1,11 @@
+//-----------------------------------------------------------
+// Client side JavaScript for Mustache demo page
+//-----------------------------------------------------------
+
+/* global $ui */
+
 class DemoVueJSFrontend {
+
 	static render(params) {
 		try {
 			if (typeof Vue === 'undefined') throw 'Vue.js not available';
@@ -10,15 +17,18 @@ class DemoVueJSFrontend {
 				bannerURL: params.bannerURL // Image banner URL
 			};
 	
-			const app = params.pub ?
-				// External use (public)
-				new Simplicite.Ajax(params.root, 'uipublic') :
+			const app = typeof $ui !== 'undefined' ?
 				// Internal UI use
-				$ui.getAjax();
+				$ui.getAjax() :
+				// External use (public)
+				new Simplicite.Ajax(params.root, 'uipublic');
 
 			const prd = app.getBusinessObject('DemoProduct');
 	
-			const vue = Vue.createApp({ data: () => data });
+			const vue = Vue.createApp({
+				data() { return data; },
+				methods: { select(i) { console.log(this); this.item = i; } }
+			});
 	
 			prd.search(rows => {
 				data.list = rows;
@@ -29,4 +39,5 @@ class DemoVueJSFrontend {
 			$('#demovuejsfrontend').text(e.message);
 		}
 	}
+
 }
