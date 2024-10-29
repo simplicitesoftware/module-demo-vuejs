@@ -1,5 +1,4 @@
 class DemoVueJSFrontend {
-
 	static render(params) {
 		try {
 			if (typeof Vue === 'undefined') throw 'Vue.js not available';
@@ -30,5 +29,4 @@ class DemoVueJSFrontend {
 			$('#demovuejsfrontend').text(e.message);
 		}
 	}
-	
 }

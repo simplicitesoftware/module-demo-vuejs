@@ -22,14 +22,14 @@
 		</div>
 		<div class="row" v-if="!item">
 			<template v-for="item in list">
-				<div class="col-md-4 clickable" v-on:click="select(item)">
+				<div class="col-md-4">
 					<h1 class="text-primary text-center">{{ item.demoPrdName }}</h1>
 					<h3 class="text-muted text-center">
 						<img v-if="item.demoPrdPicture" v-bind:src="'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content" v-bind:alt="item.demoPrdName"/>
 						<br/>{{ item.demoPrdReference }}
 					</h3>
 					<p class="text-start text-muted">{{ item.demoPrdDescription }}</p>
-					<p class="text-end"><span class="btn btn-danger btn-md">{{ parseFloat(item.demoPrdUnitPrice).toFixed(2) }}</span></p>
+					<h3 class="text-end"><span class="badge text-bg-danger">{{ parseFloat(item.demoPrdUnitPrice).toFixed(2) }}</span></p>
 				</div>
 			</template>
 		</div>
