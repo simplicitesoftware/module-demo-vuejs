@@ -13,7 +13,7 @@ class DemoVueJSFrontend {
 			const data = {
 				bannerURL: params.bannerURL // Image banner URL
 			};
-	
+
 			const app = typeof $ui !== 'undefined' ?
 				// Internal UI use
 				$ui.getAjax() :
@@ -21,12 +21,12 @@ class DemoVueJSFrontend {
 				new Simplicite.Ajax(params.root, 'uipublic');
 
 			const prd = app.getBusinessObject('DemoProduct');
-	
+
 			const vue = Vue.createApp({
 				data() { return data; },
-				methods: { select(i) { console.log(this); this.item = i; } }
+				methods: { select(i) { this.item = i; } }
 			});
-	
+
 			prd.search(rows => {
 				data.list = rows;
 				data.item = null;
