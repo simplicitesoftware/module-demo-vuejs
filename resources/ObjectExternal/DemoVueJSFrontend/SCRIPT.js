@@ -5,12 +5,11 @@
 /* global $ui */
 
 class DemoVueJSFrontend {
-
 	static render(params) {
 		try {
-			if (typeof Vue === 'undefined') throw 'Vue.js not available';
-			console.log('Vue.js ' + Vue.version);
-	
+			if (typeof Vue === 'undefined')
+				throw 'Vue.js not available';
+
 			const data = {
 				bannerURL: params.bannerURL // Image banner URL
 			};
@@ -34,9 +33,7 @@ class DemoVueJSFrontend {
 				vue.mount('#demovuejsfrontend');
 			}, null, { inlineDocs: true });
 		} catch(e) {
-			console.error('Render error: ' + e.message);
-			$('#demovuejsfrontend').text(e.message);
+			$('#demovuejsfrontend').text(`Error: ${e.message}`);
 		}
 	}
-
 }
