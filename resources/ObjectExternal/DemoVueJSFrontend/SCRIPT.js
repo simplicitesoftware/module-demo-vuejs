@@ -2,9 +2,9 @@
 // Client side JavaScript for Mustache demo page
 //-----------------------------------------------------------
 
-/* global $ui */
+/* global Vue */
 
-class DemoVueJSFrontend {
+class DemoVueJSFrontend { // eslint-disable-line no-unused-vars
 	static render(params) {
 		try {
 			if (typeof Vue === 'undefined')
