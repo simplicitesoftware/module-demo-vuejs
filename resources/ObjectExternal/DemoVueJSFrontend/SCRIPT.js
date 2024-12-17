@@ -4,8 +4,8 @@
 
 /* global Vue */
 
-class DemoVueJSFrontend { // eslint-disable-line no-unused-vars
-	static render(params) {
+var DemoVueJSFrontend = DemoVueJSFrontend || (() => {
+	function render(params) {
 		try {
 			if (typeof Vue === 'undefined')
 				throw 'Vue.js not available';
@@ -36,4 +36,6 @@ class DemoVueJSFrontend { // eslint-disable-line no-unused-vars
 			$('#demovuejsfrontend').text(`Error: ${e.message}`);
 		}
 	}
-}
+
+	return { render: render };
+})();
