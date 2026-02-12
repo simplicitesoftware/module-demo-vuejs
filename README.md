@@ -11,16 +11,19 @@
 `DemoVueJS` module definition
 =============================
 
-### Introduction
+Introduction
+------------
 
 This module contains a simple web frontend example for the demo **order management** application
 based on **Vue.js** framework.
 
-### Prerequisites
+Prerequisites
+-------------
 
 The `Demo` module **must** be installed and configured before importing this addon module.
 
-### Import
+Import
+------
 
 To import this module:
 

@@ -1,9 +1,9 @@
 {
-    "date": "2026-02-04 14:03:49",
+    "date": "2026-02-12 22:12:21",
     "name": "DemoVueJS",
     "format": "xml",
     "files": ["DemoVueJS.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-demo-vuejs.git"}},
     "version": "5",
-    "platform": "5.3.83-preview"
+    "platform": "5.3.84"
 }
